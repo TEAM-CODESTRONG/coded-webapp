@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+        <div class="logged-in">
+            <h3>Welcome User</h3>
+            <p>Welcome to TeamCodestrong HNG Login Page</p>
+            <button id="logout">Logout</button>
+        </div>
+        <div class="main logged-out" >
+            <form id="login-form">
+              <h1>TEAM CODESTRONG</h1>
+              <h3 class="header">Login to your account</h3>
+			  
+               
+               <input class="emil" type="email" id="login-email" placeholder="Email address" required />
+               <br><br>
+               
+               <input class="lit" type="password" id="login-password" placeholder="Password" required />
+               <br><br>
+			
+               <a href="register.html"><button type="button" class="reg" value="Register">Register</button></a>
+               <button type="submit" class="Button" value="login" >Login</button>
+               <br><br>
+                <input type="checkbox" class="check">
+                <label for="rem" id="remem">Remember me</label>
+                <a href="" id="forget" onclick="return remindPasswordForm">Forgot password?</a>
+                
+
+    
+            </form>
+        </div>
+
+            <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyA9Iv0vwxVNlkAri58-9oPGb7l5YyGvk5M",
+            authDomain: "team-coded.firebaseapp.com",
+            databaseURL: "https://team-coded.firebaseio.com",
+            projectId: "team-coded"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // Make auth and firestore references
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+    </script>
+    <script src="auth2.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
